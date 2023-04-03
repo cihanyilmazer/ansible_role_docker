@@ -1,0 +1,15 @@
+---
+- name: Add {{ docker_user }} to docker group
+  user:
+    name: "{{ docker_user }}"
+    append: yes
+    groups:
+      - docker
+
+- name: Change default network settings
+  template:
+    src: daemon.json.j2
+    dest: /etc/docker/daemon.json
+  notify:
+    - restart containerd
+    - restart docker
