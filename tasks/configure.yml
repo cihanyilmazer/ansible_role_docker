@@ -13,3 +13,5 @@
   notify:
     - restart containerd
     - restart docker
+  when:
+    - "{{ docker_address_pool_custom }}"
