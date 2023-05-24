@@ -14,4 +14,4 @@
     - restart containerd
     - restart docker
   when:
-    - "{{ docker_address_pool_custom }}"
+    - {{ docker_address_pool_custom }}
