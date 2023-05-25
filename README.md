@@ -13,7 +13,7 @@ Role Variables
 
 ```
 # docker_user: root
-# docker_address_pool_custom: true
+docker_address_pool_custom: false
 # docker_address_pool_base: 172.20.0.0/16
 # docker_address_pool_size: 24
 ```
