@@ -35,6 +35,15 @@ ansible-galaxy install cihanyilmazer.ansible_role_docker
       roles:
          - cihanyilmazer.ansible_role_docker
 
+Run with Custom Tags (at least one tag must be provided)
+- docker
+- docker-install
+- docker-configure
+
+```
+ansible-playbook -i hosts playbook.yml --tags initial --limit servers
+```
+
 License
 -------
 
